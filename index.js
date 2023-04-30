@@ -4,9 +4,7 @@ const users=require('./routes/users');
 
 const app=express();
 
-mongoose.connect('mongodb://127.0.0.1:27017/auth')
-    .then(()=>console.log('Mongodb connected...'))
-    .catch(err=> console.log('Could not connet to MongoDB...'));
+require('./startup/db')();
 
 
 app.use(express.json())
