@@ -5,6 +5,7 @@ const users=require('./routes/users');
 const app=express();
 
 require('./startup/db')();
+require('./startup/prod')(app);
 
 
 app.use(express.json())
